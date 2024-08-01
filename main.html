@@ -5,6 +5,24 @@
   <body>
     <p id="timer"></p>
 
-    <script src="script.js"></script>
+    <script>
+		let currentDate = new Date();
+		let day = currentDate.getDate();
+		let month = currentDate.getMonth() + 1;
+		let year = currentDate.getFullYear();
+		let hours = currentDate.getHours();
+		let minutes = currentDate.getMinutes();
+		let seconds = currentDate.getSeconds();
+
+		let formattedDate = `${day}/${month}/${year},
+		${hours}:${minutes}:${seconds}`;
+
+		document.getElementById('timer').innerText = formattedDate;
+		
+		setInterval(function() {
+    // ...previous code...
+}, 1000);
+		
+	</script>
   </body>
 </html>
